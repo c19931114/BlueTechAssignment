@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90C3C98BE867219039ED9CF /* Pods_BlueTechAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99088217E9808FC213F311F5 /* Pods_BlueTechAssignment.framework */; };
 		F183E2612C50C412007B5A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183E2602C50C412007B5A90 /* AppDelegate.swift */; };
 		F183E2632C50C412007B5A90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183E2622C50C412007B5A90 /* SceneDelegate.swift */; };
-		F183E2652C50C412007B5A90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183E2642C50C412007B5A90 /* ViewController.swift */; };
-		F183E2682C50C412007B5A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183E2662C50C412007B5A90 /* Main.storyboard */; };
+		F183E2652C50C412007B5A90 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183E2642C50C412007B5A90 /* MainViewController.swift */; };
 		F183E26A2C50C413007B5A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F183E2692C50C413007B5A90 /* Assets.xcassets */; };
 		F183E26D2C50C413007B5A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183E26B2C50C413007B5A90 /* LaunchScreen.storyboard */; };
+		F1A7C0F52C50C8FF00728E18 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A7C0F42C50C8FF00728E18 /* MainViewModel.swift */; };
+		F1A7C0F72C50D7F800728E18 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A7C0F62C50D7F800728E18 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99088217E9808FC213F311F5 /* Pods_BlueTechAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueTechAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16E4E3B23F8E7BBABF26898 /* Pods-BlueTechAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueTechAssignment.debug.xcconfig"; path = "Target Support Files/Pods-BlueTechAssignment/Pods-BlueTechAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		F183E25D2C50C412007B5A90 /* BlueTechAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueTechAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F183E2602C50C412007B5A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F183E2622C50C412007B5A90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F183E2642C50C412007B5A90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F183E2672C50C412007B5A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F183E2642C50C412007B5A90 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F183E2692C50C413007B5A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F183E26C2C50C413007B5A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F183E26E2C50C413007B5A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1A7C0F42C50C8FF00728E18 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F1A7C0F62C50D7F800728E18 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F2466E46CEEFE030AC931281 /* Pods-BlueTechAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueTechAssignment.release.xcconfig"; path = "Target Support Files/Pods-BlueTechAssignment/Pods-BlueTechAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90C3C98BE867219039ED9CF /* Pods_BlueTechAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A07395816F3DA5E7F038113 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E16E4E3B23F8E7BBABF26898 /* Pods-BlueTechAssignment.debug.xcconfig */,
+				F2466E46CEEFE030AC931281 /* Pods-BlueTechAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF933371C3432CFC6D5179C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99088217E9808FC213F311F5 /* Pods_BlueTechAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F183E2542C50C412007B5A90 = {
 			isa = PBXGroup;
 			children = (
 				F183E25F2C50C412007B5A90 /* BlueTechAssignment */,
 				F183E25E2C50C412007B5A90 /* Products */,
+				2A07395816F3DA5E7F038113 /* Pods */,
+				DF933371C3432CFC6D5179C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +84,9 @@
 			children = (
 				F183E2602C50C412007B5A90 /* AppDelegate.swift */,
 				F183E2622C50C412007B5A90 /* SceneDelegate.swift */,
-				F183E2642C50C412007B5A90 /* ViewController.swift */,
-				F183E2662C50C412007B5A90 /* Main.storyboard */,
+				F183E2642C50C412007B5A90 /* MainViewController.swift */,
+				F1A7C0F42C50C8FF00728E18 /* MainViewModel.swift */,
+				F1A7C0F62C50D7F800728E18 /* MainTableViewCell.swift */,
 				F183E2692C50C413007B5A90 /* Assets.xcassets */,
 				F183E26B2C50C413007B5A90 /* LaunchScreen.storyboard */,
 				F183E26E2C50C413007B5A90 /* Info.plist */,
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F183E2712C50C413007B5A90 /* Build configuration list for PBXNativeTarget "BlueTechAssignment" */;
 			buildPhases = (
+				E88EE260FAA3AADAD589B79D /* [CP] Check Pods Manifest.lock */,
 				F183E2592C50C412007B5A90 /* Sources */,
 				F183E25A2C50C412007B5A90 /* Frameworks */,
 				F183E25B2C50C412007B5A90 /* Resources */,
+				B3C3DD9E4A82F84443A1C932 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +156,69 @@
 			files = (
 				F183E26D2C50C413007B5A90 /* LaunchScreen.storyboard in Resources */,
 				F183E26A2C50C413007B5A90 /* Assets.xcassets in Resources */,
-				F183E2682C50C412007B5A90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3C3DD9E4A82F84443A1C932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueTechAssignment/Pods-BlueTechAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueTechAssignment/Pods-BlueTechAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlueTechAssignment/Pods-BlueTechAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E88EE260FAA3AADAD589B79D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueTechAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F183E2592C50C412007B5A90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F183E2652C50C412007B5A90 /* ViewController.swift in Sources */,
+				F183E2652C50C412007B5A90 /* MainViewController.swift in Sources */,
 				F183E2612C50C412007B5A90 /* AppDelegate.swift in Sources */,
 				F183E2632C50C412007B5A90 /* SceneDelegate.swift in Sources */,
+				F1A7C0F52C50C8FF00728E18 /* MainViewModel.swift in Sources */,
+				F1A7C0F72C50D7F800728E18 /* MainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F183E2662C50C412007B5A90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F183E2672C50C412007B5A90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F183E26B2C50C413007B5A90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,17 +351,18 @@
 		};
 		F183E2722C50C413007B5A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E16E4E3B23F8E7BBABF26898 /* Pods-BlueTechAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2AQB8YCYK;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueTechAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,17 +380,18 @@
 		};
 		F183E2732C50C413007B5A90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2466E46CEEFE030AC931281 /* Pods-BlueTechAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2AQB8YCYK;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueTechAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
