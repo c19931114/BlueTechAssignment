@@ -245,20 +245,28 @@ class MainViewController: UIViewController {
     }
 
     private func showAlert() {
-        let alertController = UIAlertController(title: "當前",
-                                                message: "Price: \(priceTextField.text ?? "")\nAmount: \(amountTextField.text ?? "")\n\(totalLabel.text ?? "")",
-                                                preferredStyle: .alert)
+        Driver.combineLatest(viewModel.output.price,
+                             viewModel.output.amount,
+                             viewModel.output.total)
+        .drive(onNext: { [weak self] (price, amount, total) in
+            guard let self else { return }
 
-        let okAction = UIAlertAction(title: "確定", style: .default) { [weak self] _ in
-            guard let self = self else { return }
-            self.priceTextField.text = ""
-            self.amountTextField.text = ""
-            self.totalLabel.text = "Total:"
-        }
+            let alertController = UIAlertController(title: "當前",
+                                                    message: "Price: \(price)\nAmount: \(amount)\n\(total)",
+                                                    preferredStyle: .alert)
 
-        alertController.addAction(okAction)
+            let okAction = UIAlertAction(title: "確定", style: .default) { [weak self] _ in
+                guard let self = self else { return }
+                self.priceTextField.text = ""
+                self.amountTextField.text = ""
+                self.totalLabel.text = "Total:"
+            }
 
-        present(alertController, animated: true, completion: nil)
+            alertController.addAction(okAction)
+
+            self.present(alertController, animated: true, completion: nil)
+
+        }).disposed(by: DisposeBag())
     }
 }
 
@@ -276,18 +284,12 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        guard let text = textField.text as NSString? else { return false }
-        let updatedText = text.replacingCharacters(in: range, with: string)
-
-        // 會有重複發送訊號的情形
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else { return }
         if textField == priceTextField {
-            viewModel.setPrice(updatedText)
+            viewModel.setPrice(text)
         } else if textField == amountTextField {
-            viewModel.setAmount(updatedText)
+            viewModel.setAmount(text)
         }
-
-        return true
     }
 }
